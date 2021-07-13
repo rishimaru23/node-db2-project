@@ -1,32 +1,32 @@
 // STRETCH
 const cars  = [
     {
-        vin: '111111111111',
+        vin: '1111111111111',
         make: "toyota",
         model: 'prius',
-        milege: 215000,
+        mileage: 215000,
         title: 'clean',
         transmission:'manuel'
     },
     {
-        vin: '111111111111',
+        vin: '2222222222222',
         make: "toyota",
         model: 'corolla',
-        milege: 115000,
+        mileage: 115000,
         title: 'salvage',
     },
     {
-        vin: '111111111111',
+        vin: '3333333333333',
         make: "ford",
         model: 'focus',
-        milege: 15000,
+        mileage: 15000,
     },
 ]
 
 exports.seed = function(knex){
     return knex('cars')
     .truncate().then(() => {
-        return knex('knex').insert(cars)
+        return knex('cars').insert(cars)
     })
     
 }
